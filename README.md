@@ -6,3 +6,5 @@
 
 - EJS as templating language
 - NodeJs + Express
+- Axios
+- Current rate fetched from Foreign exchange rates API (European Central Bank)

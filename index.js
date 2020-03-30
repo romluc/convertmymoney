@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 
 const convert = require('./lib/convert');
+const getQuotation = require('./lib/getQuotation');
 
 const port = 3000 || process.env.PORT;
 
@@ -15,8 +16,10 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.get('/quotation', (req, res) => {
-  const { quotation, quantity } = req.query;
+app.get('/quotation', async (req, res) => {
+  const quotation = await getQuotation.getQuotation();
+
+  const { quantity } = req.query;
   if (quotation && quantity) {
     const conversion = convert.convert(quotation, quantity);
     res.render('quotation', {

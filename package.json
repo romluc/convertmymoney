@@ -9,10 +9,12 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "ejs": "^3.0.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "jest": "^25.2.4",
     "nodemon": "^2.0.2"
   }
 }
