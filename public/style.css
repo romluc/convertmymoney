@@ -47,3 +47,8 @@ h1 img {
   background: #fdfdfd;
   width: 30%;
 }
+
+.result > h2 {
+  font-size: 1.2em;
+  text-align: center;
+}

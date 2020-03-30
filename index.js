@@ -19,12 +19,15 @@ app.get('/', (req, res) => {
 app.get('/quotation', async (req, res) => {
   const quotation = await getQuotation.getQuotation();
 
+  console.log(quotation);
+
   const { quantity } = req.query;
-  if (quotation && quantity) {
-    const conversion = convert.convert(quotation, quantity);
+  if (quotation.data && quantity) {
+    const conversion = convert.convert(quotation.data, quantity);
     res.render('quotation', {
       error: false,
-      quotation: convert.toMoney(quotation),
+      date: quotation.date,
+      quotation: convert.toMoney(quotation.data),
       quantity: convert.toMoney(quantity),
       conversion: convert.toMoney(conversion)
     });
