@@ -19,8 +19,6 @@ app.get('/', (req, res) => {
 app.get('/quotation', async (req, res) => {
   const quotation = await getQuotation.getQuotation();
 
-  console.log(quotation);
-
   const { quantity } = req.query;
   if (quotation.data && quantity) {
     const conversion = convert.convert(quotation.data, quantity);

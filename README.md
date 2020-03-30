@@ -4,7 +4,8 @@
 
 ## Features:
 
-- EJS as templating language
 - NodeJs + Express
+- EJS as templating language
+- Testing with Jest
 - Axios
-- Current rate fetched from Foreign exchange rates API (European Central Bank)
+- Current currency rate fetched from Foreign exchange rates API (European Central Bank)
