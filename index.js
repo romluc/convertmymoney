@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+const convert = require('./lib/convert');
+
 const port = 3000 || process.env.PORT;
 
 app.set('view engine', 'ejs');
@@ -14,7 +16,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/quotation', (req, res) => {
-  res.render('quotation');
+  const { quotation, quantity } = req.query;
+  const convertion = convert.convert(quotation, quantity);
+  res.render('quotation', {
+    quotation,
+    quantity,
+    convertion
+  });
 });
 
 app.listen(port, err => {
