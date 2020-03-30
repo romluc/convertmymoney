@@ -1,6 +1,6 @@
-# Convert currency project
+# Currency conversion project
 
-## Based on devPleno's Convert My Money project
+## Based on devPleno's Convert My Money project - FullStack Master Course
 
 ## Features:
 
