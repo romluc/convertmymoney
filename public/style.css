@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  border: 1px solid #222;
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 4px;
+  width: 100%;
+  background: #fdfdfd;
+}
+
+form button {
+  border: 1px solid #222;
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 4px;
+  background-color: #c0c0c0;
+  width: 100%;
+  color: #444;
+}
+
+form button:hover {
+  transition: 0.4s ease;
+  opacity: 0.8;
+  color: #222;
+}
+
+h1 img {
+  width: 490px;
+  margin-top: 20px;
+}

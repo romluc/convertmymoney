@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
+app.get('/quotation', (req, res) => {
+  res.render('quotation');
+});
+
 app.listen(port, err => {
   if (err) {
     console.log('Unable to start server');
