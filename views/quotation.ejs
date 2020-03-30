@@ -1,3 +1,11 @@
 <%- include('header')%>
-Quotation: <%- quotation%>
+<div class="result">
+  <% if (error) { %>
+  <%= error %>
+  <% } else { %>
+  <p>You have: $ <%= quantity %></p>
+  <p>Today's Quotation: <%= quotation%></p>
+  <p>Your converted total in BRL is: R$ <%= conversion %></p>
+  <% } %>
+</div>
 <%- include('footer')%>

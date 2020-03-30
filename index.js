@@ -17,12 +17,19 @@ app.get('/', (req, res) => {
 
 app.get('/quotation', (req, res) => {
   const { quotation, quantity } = req.query;
-  const convertion = convert.convert(quotation, quantity);
-  res.render('quotation', {
-    quotation,
-    quantity,
-    convertion
-  });
+  if (quotation && quantity) {
+    const conversion = convert.convert(quotation, quantity);
+    res.render('quotation', {
+      error: false,
+      quotation: convert.toMoney(quotation),
+      quantity: convert.toMoney(quantity),
+      conversion: convert.toMoney(conversion)
+    });
+  } else {
+    res.render('quotation', {
+      error: 'Oops! Insert values!'
+    });
+  }
 });
 
 app.listen(port, err => {
