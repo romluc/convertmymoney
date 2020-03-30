@@ -1,4 +1,4 @@
-# Currency conversion project :moneybag:
+# Currency conversion project :moneybag::bank:
 
 ## Based on devPleno's Convert My Money project :dollar: - FullStack Master Course
 
